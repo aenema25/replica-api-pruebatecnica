@@ -1,5 +1,56 @@
 # Replica api "Soleit" (prueba tecnica)
 
+## Version en vivo
+
+* [Heroku](https://replica-api-soleit.herokuapp.com/)
+
+## Uso
+
+### Endpoint "login"
+
+Este endpoint es de tipo ```POST```, recibe los atributos "user" y "password" dentro del body de la petición y devuelve un objeto.
+
+```javascript
+// cuerpo solicitud
+{
+    user:usuario,
+    password:contraseña
+}
+
+// respuesta solicitud
+{ 
+    "key": "String" 
+}
+```
+
+### Endpoint "points"
+
+Este endpoint es de tipo ```GET```, el cual devuelve una series de puntos (x,y) en forma de objeto.
+
+```javascript
+// respuesta esperada
+{
+    rectangle1: [...],
+    triangle: [...],
+    rectangle2: [...]
+}
+```
+
+### Endpoint "welcome"
+
+Este endpoint es de tipo ```GET```, el cual recibe un parametro dentro de la ```URL``` de la petición.
+
+* Ejemplo peticion
+```bash
+http://localhost:3000/welcome/nombre
+```
+* Ejemplo respuesta
+```javascript
+{ 
+    welcome: "Hello nombre!"] 
+}
+```
+
 ## Descripción
 
 Replica de API para prueba tecnica de la empresa "Soleit"
